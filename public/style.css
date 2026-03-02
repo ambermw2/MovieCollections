@@ -189,3 +189,37 @@ nav a:hover {
 .category-card .view-link:hover {
   color: #ffd700;
 }
+
+.category-page-image {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.movie-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.movie-item {
+  font-size: 1.4rem;
+  padding: 10px;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: #ff6f61;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.back-link:hover {
+  color: #ffd700;
+}

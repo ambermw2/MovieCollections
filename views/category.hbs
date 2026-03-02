@@ -1,0 +1,17 @@
+{{> menu id="dashboard"}}
+
+<div class="dashboard">
+  <h1>{{title}}</h1>
+
+  <img src="{{image}}" alt="{{title}}" class="category-page-image">
+
+  <ul class="movie-list">
+    {{#each movies}}
+      <li class="movie-item">{{this}}</li>
+    {{/each}}
+  </ul>
+
+  <a href="/dashboard" class="back-link">
+    <i class="arrow left icon"></i> Back to Dashboard
+  </a>
+</div>
