@@ -1,9 +1,24 @@
 {
-  "info": {
-    "message": 
-      "The app-store.json and app-store.js files can be expanded to store some facts about the app e.g. the app's creators. You should also add your own store (equivalent to our playlist-store.json). See the assignment spec for more details.",
-    "creators": [
-      
-    ]
-  }
+  "categories": [
+    {
+      "title": "Action",
+      "items": ["Die Hard", "Mad Max", "John Wick"],
+      "image": ["/images/action.jpg"]
+    },
+    {
+      "title": "Comedy",
+      "items": ["The Hangover", "Superbad", "Step Brothers"],
+      "image": ["/images/comedy.jpg"]
+    },
+    {
+      "title": "Drama",
+      "items": ["The Godfather", "Forrest Gump", "Shawshank Redemption"],
+      "image": ["/images/drama.png"]
+    },
+    {
+      "title": "Horror",
+      "image": "/images/horror.jpg",
+      "items": ["The Conjuring", "It", "A Nightmare on Elm Street"]
+    }
+  ]
 }

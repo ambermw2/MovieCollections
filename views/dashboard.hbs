@@ -1,0 +1,14 @@
+{{> menu id="dashboard"}}
+
+<div class="ui container dashboard">
+  <h1 class="ui header">{{title}}</h1>
+
+  <div class="category-row">
+  {{#each categories}}
+    <div class="category-card">
+      <img class="category-image" src="{{this.image}}" alt="{{this.title}}">
+      <a class="category-link" href="/category/{{this.title}}">{{this.title}}</a>
+      <i class="eye icon"></i> View Items
+    </div>
+  {{/each}}
+</div>

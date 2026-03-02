@@ -45,15 +45,147 @@ body {
 
 .nav .item {
   font-size: 1.2rem;
+  font-family: 'Indie Flower', sans-serif !important;
 }
 
 .nav .header.item {
   font-size: 1.4rem;
   font-weight: bold;
+ 
 }
 
 nav a:hover {
     color: #E50914 !important;
 }
 
+ ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
+  .category-item {
+    padding: 8px 0;
+    font-size: 18px;
+  }
+
+  .dashboard {
+  background: linear-gradient(135deg, #0b0c10, #1f2833); 
+  color: #ffffff;
+  min-height: 500px;          
+  max-width: 1200px;        
+  margin: 20px auto;         
+  padding: 40px 20px;        
+  border-radius: 15px;      
+  box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+  font-family: 'Indie Flower', sans-serif;
+}
+
+.dashboard h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white !important;
+  margin-bottom: 50px;
+  font-family: 'Indie Flower', sans-serif !important;
+}
+
+.category-list {
+  background: rgba(20, 20, 20, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 10px 0;
+}
+
+.category-item .icon {
+  margin-right: 15px;
+  color: #ff6f61;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.category-item .icon:hover {
+  color: #ffd700;
+  transform: scale(1.2);
+}
+
+.category-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.category-link:hover {
+  color: #ff6f61;
+}
+
+.nav-link {
+    color: white;
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 1.4rem; 
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+
+.right.menu a.nav-link {
+    margin-left: 20px;  
+    padding: 25px 0;    
+    display: inline-block; 
+}
+
+
+.category-row {
+  display: flex;
+  flex-wrap: nowrap;        
+  gap: 30px;                
+  justify-content: center;  
+  overflow-x: auto;         
+  padding-bottom: 20px;     
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(20, 20, 20, 0.7);
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.category-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.category-card h3 {
+  color: white;
+  margin-bottom: 10px;
+  font-family: 'Indie Flower', sans-serif;
+  font-size: 1.5rem;
+}
+
+.category-card .view-link {
+  color: #ff6f61;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.category-card .view-link:hover {
+  color: #ffd700;
+}

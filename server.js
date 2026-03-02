@@ -10,9 +10,14 @@ const port = 3000;
 
 app.use(express.static("public"));
 
-const handlebars = create({extname: '.hbs'});
-app.engine(".hbs", handlebars.engine);
-app.set("view engine", ".hbs");
+const handlebars = create({
+  extname: '.hbs',
+  layoutsDir: './views/layouts',     
+  partialsDir: './views/partials'    
+});
+
+app.engine('.hbs', handlebars.engine);
+app.set('view engine', '.hbs');
 
 app.use("/", routes);
 
