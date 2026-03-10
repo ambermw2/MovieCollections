@@ -21,7 +21,12 @@ const appStore = {
       name: 'Movie Collection App',
       version: '1.0'
     };
-}
+},
+
+    getAboutInfo() {
+        return this.store.findAll('about')[0];
+    
+   }
 };
 
 export default appStore;

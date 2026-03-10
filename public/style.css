@@ -223,3 +223,34 @@ nav a:hover {
 .back-link:hover {
   color: #ffd700;
 }
+
+.about-page .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.contact-details, .location-map, .app-stats {
+  background: rgba(20,20,20,0.7);
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+}
+
+.map-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.about-page, .dashboard {
+  background: #1f1f1f; 
+  min-height: auto;
+  padding: 40px 20px;
+  font-family: 'Indie Flower', sans-serif;
+  border-radius: 10px;
+  margin-top: 20px;
+}

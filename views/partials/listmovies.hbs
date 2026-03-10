@@ -1,0 +1,29 @@
+{{#if movies}}
+
+  <table class="ui unstackable striped table">
+    <thead>
+      <tr>
+        <th>Movie</th>
+        <th>Director</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each mvoies}}
+        <tr>
+          <td>
+            {{title}}np
+          </td>
+          <td>
+            {{Director}}
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  {{else}}
+    <h3 class="ui message">
+      Empty!
+    </h3>
+
+{{/if}}
