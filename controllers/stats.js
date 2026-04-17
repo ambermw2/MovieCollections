@@ -2,6 +2,7 @@
 import logger from "../utils/logger.js";
 import appStore from "../models/app-store.js";
 import accounts from "./accounts.js";
+import userStore from "../models/user-store.js";
 
 const stats = {
   createView(request, response) {
@@ -13,6 +14,8 @@ const stats = {
     const categories = appStore.getAllCategories();
 
     const numCategories = categories.length;
+
+    const numUsers = userStore.getAllUsers().length;
 
     const movies = categories.flatMap(category =>
       category.items ? category.items : []
@@ -55,7 +58,8 @@ const stats = {
       displayAvgRating: avgRating,
       displayMaxRating: maxRating,
       displayFavTitles: favTitles,
-      displayLargestCategory: largestCategory.title
+      displayLargestCategory: largestCategory.title,
+      displayNumUsers: numUsers
     };
 
     const viewData = {
