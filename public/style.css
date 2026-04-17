@@ -254,3 +254,102 @@ nav a:hover {
   border-radius: 10px;
   margin-top: 20px;
 }
+
+.ui.form.segment {
+  background-color: #1b1c1d !important;  
+  border: 1px solid #2f2f2f !important;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.ui.form .field > label {
+  color: #f1f1f1 !important;
+}
+
+.ui.form input {
+  background-color: #2b2b2b !important;
+  color: #ffffff !important;
+  border: 1px solid #444 !important;
+}
+
+.ui.form input::placeholder {
+  color: #aaa;
+}
+
+.ui.form input:focus {
+  border-color: #2185d0 !important; 
+  box-shadow: 0 0 5px rgba(33,133,208,0.5);
+}
+
+.ui.form .button {
+  margin-top: 10px;
+}
+
+.ui.table {
+  background-color: #1b1c1d !important;
+  color: #f1f1f1 !important;
+  border: 1px solid #2f2f2f !important;
+}
+
+.ui.table thead th {
+  background-color: #242526 !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid #333 !important;
+}
+
+.ui.table tbody tr {
+  background-color: #1b1c1d !important;
+}
+
+.ui.table tbody tr:nth-child(even) {
+  background-color: #222 !important;
+}
+
+.ui.table td {
+  border-top: 1px solid #2f2f2f !important;
+  color: #e0e0e0 !important;
+}
+
+.ui.table tbody tr:hover {
+  background-color: #2a2a2a !important;
+}
+
+.category-title {
+  color: white !important;
+}
+
+section.ui.segment {
+  color: white !important;
+}
+
+section.ui.segment h2,
+section.ui.segment h3 {
+  color: white !important;
+}
+
+section.ui.segment p {
+  color: white !important;
+}
+
+.ui.statistic .label {
+  color: #ffffff !important;
+}
+
+table {
+  margin: auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+.name{
+  padding-top:22.5px;
+  padding-right:5px;
+  line-height:20px;
+  font-weight:bold;
+  text-transform:capitalize;
+}

@@ -66,6 +66,7 @@ class JsonStore {
     data[0][arr].splice(index, 1, obj);
     await this.db.write();
   }
+
 }
 
 export default JsonStore;

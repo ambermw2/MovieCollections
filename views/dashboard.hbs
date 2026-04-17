@@ -3,6 +3,12 @@
 <div class="ui container dashboard">
   <h1 class="ui header">{{title}}</h1>
 
+<form action="/searchMovies" method="GET" class="ui form">
+  <div class="field">
+    <input type="text" name="searchTerm" placeholder="Search movies...">
+  </div>
+</form>
+
   <div class="category-row">
   {{#each categories}}
     <div class="category-card">

@@ -1,29 +1,91 @@
 {{#if movies}}
 
+
+  
+  
   <table class="ui unstackable striped table">
     <thead>
       <tr>
         <th>Movie</th>
         <th>Director</th>
+        <th>Rating</th>
+        <th>Edit</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
-      {{#each mvoies}}
+      {{#each movies}}
         <tr>
           <td>
-            {{title}}np
+            {{#if this.title}}
+              {{this.title}}
+            {{else}}
+              {{this}}
+            {{/if}}
           </td>
+
           <td>
-            {{Director}}
+            {{#if this.director}}
+              {{this.director}}
+            {{/if}}
+          </td>
+
+          <td>
+            {{#if this.rating}}
+              {{this.rating}} / 5
+            {{else}}
+              -
+            {{/if}}
+          </td>
+
+          <td class="center aligned">
+            {{#if this.id}}
+              <button class="ui blue mini button" type="button"
+                onclick="document.getElementById('edit-{{this.id}}').style.display='table-row';">
+                <i class="pencil icon"></i>
+              </button>
+            {{/if}}
+          </td>
+
+          <td class="center aligned">
+            {{#if this.id}}
+              <a href="/category/{{../categoryTitle}}/deletemovie/{{this.id}}"
+                 title="Delete Movie">
+                <i class="ui red trash icon"></i>
+              </a>
+            {{/if}}
           </td>
         </tr>
+
+        {{#if this.id}}
+          <tr id="edit-{{this.id}}" style="display:none;">
+            <td colspan="5">
+              <form class="ui form" action="/category/{{../categoryTitle}}/editmovie/{{this.id}}" method="POST">
+                <div class="three fields">
+                  <div class="field">
+                    <label>Movie</label>
+                    <input type="text" name="title" value="{{this.title}}" required>
+                  </div>
+
+                  <div class="field">
+                    <label>Director</label>
+                    <input type="text" name="director" value="{{this.director}}" required>
+                  </div>
+
+                  <div class="field">
+                    <label>Rating</label>
+                    <input type="number" name="rating" min="1" max="5" value="{{this.rating}}" required>
+                  </div>
+                </div>
+
+                <button class="ui green mini button" type="submit">Save</button>
+              </form>
+            </td>
+          </tr>
+        {{/if}}
       {{/each}}
     </tbody>
   </table>
-
-  {{else}}
-    <h3 class="ui message">
-      Empty!
-    </h3>
-
+{{else}}
+  <h3 class="ui message">Empty!</h3>
 {{/if}}

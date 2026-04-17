@@ -1,33 +1,20 @@
 {{> menu id="dashboard"}}
 
-<div class="dashboard">
-  <h1>{{title}}</h1>
+<div class="ui container category-page">
+  <h1 class="ui centered header category-title">{{title}}</h1>
 
-  <img src="{{image}}" alt="{{title}}" class="category-page-image">
+  <div class="ui center aligned segment">
+    <img src="{{image}}" alt="{{title}}" class="category-page-image">
+  </div>
 
-  <ul class="movie-list">
-    {{#each movies}}
-      <li class="movie-item">{{this}}</li>
-    {{/each}}
-  </ul>
+  <div class="ui segment">
+    <h2 class="ui centered header category-title">{{title}}</h2>
+    {{> listmovies movies=movies categoryTitle=title }}
+  </div>
 
-  <section class="ui center aligned middle aligned scrolling segment">
-
-    <h2 class="ui header">
-      {{title}}
-    </h2>
-
-    {{> listmovies}}
-
-  </section>
-
-  <section class="ui center aligned middle aligned segment">
-
-    {{> addmovie}}
-
-  </section>
-
-
+  <div class="ui segment">
+    {{> addmovie category=category}}
+  </div>
 
   <a href="/dashboard" class="back-link">
     <i class="arrow left icon"></i> Back to Dashboard

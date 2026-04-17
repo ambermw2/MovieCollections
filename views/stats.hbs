@@ -1,0 +1,90 @@
+{{> menu id="stats"}}
+
+<section class="ui center aligned middle aligned segment">
+
+  <h2>Movie Collection Statistics</h2>
+
+  <h3 class="ui header">
+    App Statistics
+  </h3>
+  <p>
+    The movie app now contains:
+  </p>
+  {{#with stats}}
+  <div class="ui center aligned grid">
+
+    <div class="ui sixteen wide column">
+
+      <div class="ui centered three statistics">
+        <div class="ui statistic">
+          <div class="value">
+            <i class="green microphone icon"></i>
+          </div>
+          <div class="label">
+            {{displayNumCategories}} categories
+          </div>
+        </div>
+
+        <div class="ui red statistic">
+          <div class="value">
+            <i class="music icon"></i>
+          </div>
+          <div class="label">
+            {{displayNumMovies}} movies
+          </div>
+        </div>
+
+        <div class="ui blue statistic">
+          <div class="value">
+            <i class="balance scale icon"></i>
+          </div>
+          <div class="label">
+            Average movies per <br> category: {{displayAverage}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui sixteen wide column">
+      <div class="ui centered two statistics">
+
+        <div class="ui yellow statistic">
+          <div class="value">
+            <i class="star icon"></i>
+          </div>
+          <div class="label">
+            Highest Rated movies: {{highest}} stars
+            <table>
+              {{#each displayFav}}
+              <tr>
+                <td>{{this}}</td>
+              </tr>
+              {{/each}}
+            </table>
+          </div>
+        </div>
+
+        <div class="ui green statistic">
+          <div class="value">
+            <i class="dot circle outline icon"></i>
+          </div>
+          <div class="label">
+            Average Rating: {{displayAvgRating}}
+          </div>
+        </div>
+		<div class="ui centered purple statistic">
+  <div class="value">
+    <i class="purple add icon"></i>
+  </div>
+  <div class="label">
+    Largest movie category: {{displayLargestCategory}}
+  </div>
+</div>
+      </div>
+    </div>
+    
+  </div>
+
+  {{/with}}
+
+</section>
