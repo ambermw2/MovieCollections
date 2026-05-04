@@ -3,18 +3,48 @@
 <div class="ui container dashboard">
   <h1 class="ui header">{{title}}</h1>
 
-<form action="/searchMovies" method="GET" class="ui form">
-  <div class="field">
-    <input type="text" name="searchTerm" placeholder="Search movies...">
-  </div>
-</form>
+  <form action="/searchMovies" method="GET" class="ui form">
+    <div class="field">
+      <input type="text" name="searchTerm" placeholder="Search movies...">
+    </div>
+  </form>
 
   <div class="category-row">
-  {{#each categories}}
-    <div class="category-card">
-      <img class="category-image" src="{{this.image}}" alt="{{this.title}}">
-      <a class="category-link" href="/category/{{this.title}}">{{this.title}}</a>
-      <i class="eye icon"></i> View Items
+    {{#each categories}}
+      <div class="category-card">
+        <img class="category-image" src="{{this.image}}" alt="{{this.title}}">
+        <a class="category-link" href="/category/{{this.title}}">{{this.title}}</a>
+
+        <div class="category-actions">
+          <a href="/category/{{this.title}}" ></a>
+            <i class="eye icon"></i> View 
+          
+
+          <a href="/dashboard/deletecategory/{{this.title}}" class="ui red small button">
+            <i class="trash icon"></i> Delete
+          </a>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+
+  <section class="ui segment">
+    <h3 class="ui header">Add Category</h3>
+
+    <form class="ui form" action="/dashboard/addcategory" method="POST" enctype="multipart/form-data">
+  <div class="two fields">
+    <div class="field">
+      <label>Category Title</label>
+      <input type="text" name="title" placeholder="Category Title" required>
     </div>
-  {{/each}}
+
+    <div class="field">
+      <label>Choose Image</label>
+      <input type="file" name="image" accept="image/*" required>
+    </div>
+  </div>
+
+  <button class="ui blue button" type="submit">Add Category</button>
+</form>
+  </section>
 </div>

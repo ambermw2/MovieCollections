@@ -353,3 +353,17 @@ table {
   font-weight:bold;
   text-transform:capitalize;
 }
+
+.ui.statistics .statistic .value,
+.ui.statistics .statistic .label,
+.ui.header {
+  color: white !important;
+}
+
+.ui.menu .item{
+  color: white !important;
+}
+
+.ui.menu .item:hover {
+  color: maroon !important;
+}

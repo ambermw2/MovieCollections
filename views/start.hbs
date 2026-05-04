@@ -10,3 +10,47 @@
     
 
 </section>
+
+<section class="ui center aligned middle aligned segment">
+  <h2 class="ui header">Statistics</h2>
+
+  {{#with stats}}
+    <div class="ui centered four statistics">
+      <div class="ui statistic">
+        <div class="value">
+          <i class="folder open icon"></i>
+        </div>
+        <div class="label">
+          {{displayNumCategories}} Categories
+        </div>
+      </div>
+
+      <div class="ui statistic">
+        <div class="value">
+          <i class="film icon"></i>
+        </div>
+        <div class="label">
+          {{displayNumMovies}} Movies
+        </div>
+      </div>
+
+      <div class="ui statistic">
+        <div class="value">
+          <i class="star icon"></i>
+        </div>
+        <div class="label">
+          Average Rating: {{displayAvgRating}}
+        </div>
+      </div>
+
+      <div class="ui statistic">
+        <div class="value">
+          <i class="users icon"></i>
+        </div>
+        <div class="label">
+          {{displayNumUsers}} Users
+        </div>
+      </div>
+    </div>
+  {{/with}}
+</section>

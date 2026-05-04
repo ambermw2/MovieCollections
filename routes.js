@@ -4,12 +4,22 @@ import express from 'express';
 const router = express.Router();
 import logger from "./utils/logger.js";
 import stats from './controllers/stats.js';
-
-
 import start from './controllers/start.js';
 import dashboard from './controllers/dashboard.js';
 import about from './controllers/about.js';
 import accounts from './controllers/accounts.js';
+import multer from 'multer';
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "public/images");
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + "-" + file.originalname);
+  }
+});
+
+const upload = multer({ storage: storage });
 
 
 
@@ -28,6 +38,8 @@ router.get('/signup', accounts.signup);
 router.get('/logout', accounts.logout);
 router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
+router.post('/dashboard/addcategory', upload.single('image'), dashboard.addCategory);
+router.get('/dashboard/deletecategory/:title', dashboard.deleteCategory);
 
 
 

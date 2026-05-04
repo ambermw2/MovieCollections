@@ -76,7 +76,22 @@ const appStore = {
         (movie.director && movie.director.toLowerCase().includes(search.toLowerCase()))
       );
     });
+  },
+
+  addCategory(category) {
+  this.store.db.data[this.collection].push(category);
+  this.store.db.write();
+},
+
+deleteCategory(title) {
+  const categories = this.getAllCategories();
+  const index = categories.findIndex(category => category.title === title);
+
+  if (index > -1) {
+    categories.splice(index, 1);
+    this.store.db.write();
   }
+}
 };
 
 export default appStore;

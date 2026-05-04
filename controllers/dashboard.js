@@ -3,10 +3,12 @@
 import logger from "../utils/logger.js";
 import appStore from "../models/app-store.js";
 import { v4 as uuidv4 } from 'uuid';
+import accounts from "./accounts.js";
 
 const dashboard = {
 
   createView(request, response) {
+    const loggedInUser = accounts.getCurrentUser(request);
     logger.info("Dashboard page loading!");
     const categories = appStore.getAllCategories().map(cat => ({
       title: cat.title,
@@ -122,8 +124,24 @@ const dashboard = {
     };
 
     response.render("search", viewData);
-  }
+  },
 
-};
+  addCategory(request, response) {
+    const newCategory = {
+      title: request.body.title,
+      image: "/images/" + request.file.filename,
+      items: []
+    };
+    appStore.addCategory(newCategory);
+    response.redirect('/dashboard');
+  },
+  deleteCategory(request, response){
+    const categoryTitle = request.params.title;
+    appStore.deleteCategory(categoryTitle);
+    response.redirect('/dashboard');
+  }
+}
+
+
 
 export default dashboard;

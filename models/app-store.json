@@ -5,7 +5,13 @@
       "items": [
         "Die Hard",
         "Mad Max",
-        "John Wick"
+        "John Wick",
+        {
+          "id": "392ee096-bc0a-4229-8efb-20f5dcecc5e5",
+          "title": "Hard Boiled",
+          "director": "John Woo",
+          "rating": 4
+        }
       ],
       "image": [
         "/images/action.jpg"
@@ -40,6 +46,18 @@
         "The Conjuring",
         "It",
         "A Nightmare on Elm Street"
+      ]
+    },
+    {
+      "title": "Sci-Fi",
+      "image": "/images/1776460597699-interstellar.jpg",
+      "items": [
+        {
+          "id": "5e144851-dd2b-4b00-89b7-a7909ab541fc",
+          "title": "Interstellar",
+          "director": "Christopher Nolan",
+          "rating": 5
+        }
       ]
     }
   ],
